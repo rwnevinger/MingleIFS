@@ -1,0 +1,18 @@
+2019-03-09 03:22:16,947  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-09 03:22:16,953  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-09 03:22:16,953  INFO OAuth2.java InitProperties - password_credentials
+2019-03-09 03:22:16,953  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-09 03:22:16,955  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-09 03:22:16,955  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-09 03:22:16,956  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-09 03:22:16,956  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-09 03:22:16,956  INFO OAuth2.java InitProperties - End InitProperties()
+2019-03-09 03:26:13,927  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-09 03:26:13,931  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-09 03:26:13,931  INFO OAuth2.java InitProperties - password_credentials
+2019-03-09 03:26:13,931  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-09 03:26:13,933  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-09 03:26:13,934  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-09 03:26:13,934  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-09 03:26:13,934  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-09 03:26:13,934  INFO OAuth2.java InitProperties - End InitProperties()

@@ -1,0 +1,8 @@
+*.log
+src/main/logs
+/bin/generated-sources
+/bin/enerated-test-sources
+/bin/maven-archiver
+/bin/maven-status
+/bin/surefire-reports
+/bin/test-classes

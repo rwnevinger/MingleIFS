@@ -1,0 +1,496 @@
+2019-03-10 18:15:43,351  INFO UserXml.java initProperties - Begin initProperties()
+2019-03-10 18:15:43,351  INFO UserXml.java initProperties - property file userxml.properties
+2019-03-10 18:15:43,351  INFO UserXml.java initProperties - hostname:https://mingle-ionapi.inforcloudsuite.com/
+2019-03-10 18:15:43,351  INFO UserXml.java initProperties - rest_generic_list:LAWSONGHR/hcm/soap/classes/Employee/lists/_generic?
+2019-03-10 18:15:43,351  INFO UserXml.java initProperties - tenant_env:ONEONCOLOGY_TST
+2019-03-10 18:15:43,352  INFO UserXml.java initProperties - folder:/mnt/oneoncology/TST/IFS
+2019-03-10 18:15:43,352  INFO UserXml.java initProperties - End initProperties()
+2019-03-10 18:15:43,354  INFO UserXml.java parseTemplate - Begin parseTemplate()
+2019-03-10 18:15:43,354  INFO UserXml.java parseTemplate - /mnt/oneoncology/TST/IFS/SCMUserRoles.csv exists
+2019-03-10 18:15:43,424  INFO UserXml.java parseTemplate - Setting CloudSuite Roles CSROLES
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 5:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 6:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 7:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 8:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 9:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 10:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 11:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 12:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 13:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 14:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 15:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 16:
+2019-03-10 18:15:43,425  INFO UserXml.java parseTemplate - Setting Roles index 17:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 18:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 19:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 20:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 21:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 22:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 23:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 24:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 25:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 26:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 27:Approver_ST
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 28:
+2019-03-10 18:15:43,426  INFO UserXml.java parseTemplate - Setting Roles index 29:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 30:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 31:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 32:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 33:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 34:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 35:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 36:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 37:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 38:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 39:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 40:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 41:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 42:
+2019-03-10 18:15:43,427  INFO UserXml.java parseTemplate - Setting Roles index 43:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 44:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 45:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 46:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 47:Buyer_ST
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 48:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 49:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 50:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 51:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 52:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 53:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 54:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 55:
+2019-03-10 18:15:43,428  INFO UserXml.java parseTemplate - Setting Roles index 56:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 57:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 58:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 59:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 60:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 61:ContractManager_ST
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 62:ContractTermsManager_ST
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 63:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 64:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 65:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 66:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 67:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 68:
+2019-03-10 18:15:43,429  INFO UserXml.java parseTemplate - Setting Roles index 69:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 70:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 71:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 72:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 73:DECISIONSERVICE-Approver
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 74:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 75:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 76:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 77:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 78:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 79:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 80:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 81:
+2019-03-10 18:15:43,430  INFO UserXml.java parseTemplate - Setting Roles index 82:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 83:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 84:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 85:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 86:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 87:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 88:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 89:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 90:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 91:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 92:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 93:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 94:
+2019-03-10 18:15:43,431  INFO UserXml.java parseTemplate - Setting Roles index 95:
+2019-03-10 18:15:43,432  INFO UserXml.java parseTemplate - Setting Roles index 96:
+2019-03-10 18:15:43,432  INFO UserXml.java parseTemplate - Setting Roles index 97:
+2019-03-10 18:15:43,432  INFO UserXml.java parseTemplate - Setting Roles index 98:
+2019-03-10 18:15:43,436  INFO UserXml.java parseTemplate - Setting Roles index 99:
+2019-03-10 18:15:43,436  INFO UserXml.java parseTemplate - Setting Roles index 100:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 101:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 102:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 103:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 104:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 105:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 106:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 107:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 108:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 109:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 110:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 111:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 112:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 113:
+2019-03-10 18:15:43,437  INFO UserXml.java parseTemplate - Setting Roles index 114:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 115:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 116:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 117:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 118:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 119:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 120:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 121:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 122:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 123:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 124:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 125:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 126:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 127:
+2019-03-10 18:15:43,438  INFO UserXml.java parseTemplate - Setting Roles index 128:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 129:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 130:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 131:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 132:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 133:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 134:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 135:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 136:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 137:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 138:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 139:
+2019-03-10 18:15:43,439  INFO UserXml.java parseTemplate - Setting Roles index 140:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 141:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 142:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 143:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 144:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 145:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 146:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 147:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 148:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 149:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 150:
+2019-03-10 18:15:43,440  INFO UserXml.java parseTemplate - Setting Roles index 151:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 152:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 153:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 154:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 155:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 156:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 157:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 158:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 159:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 160:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 161:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 162:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 163:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 164:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 165:
+2019-03-10 18:15:43,441  INFO UserXml.java parseTemplate - Setting Roles index 166:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 167:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 168:InventoryManager_ST
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 169:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 170:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 171:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 172:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 173:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 174:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 175:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 176:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 177:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 178:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 179:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 180:
+2019-03-10 18:15:43,442  INFO UserXml.java parseTemplate - Setting Roles index 181:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 182:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 183:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 184:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 185:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 186:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 187:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 188:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 189:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 190:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 191:POBuyer
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 192:POPurchasingManager
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 193:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 194:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 195:
+2019-03-10 18:15:43,443  INFO UserXml.java parseTemplate - Setting Roles index 196:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 197:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 198:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 199:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 200:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 201:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 202:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 203:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 204:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 205:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 206:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 207:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 208:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 209:
+2019-03-10 18:15:43,444  INFO UserXml.java parseTemplate - Setting Roles index 210:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 211:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 212:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 213:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 214:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 215:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 216:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 217:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 218:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 219:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 220:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 221:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 222:PurchasingManager_ST
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 223:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 224:
+2019-03-10 18:15:43,445  INFO UserXml.java parseTemplate - Setting Roles index 225:RQRequester
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 226:RSSRequester
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 227:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 228:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 229:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 230:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 231:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 232:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 233:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 234:Receiver_ST
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 235:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 236:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 237:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 238:
+2019-03-10 18:15:43,446  INFO UserXml.java parseTemplate - Setting Roles index 239:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 240:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 241:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 242:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 243:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 244:Requester_ST
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 245:RequisitionApprover_ST
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 246:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 247:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 248:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 249:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 250:
+2019-03-10 18:15:43,449  INFO UserXml.java parseTemplate - Setting Roles index 251:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 252:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 253:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 254:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 255:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 256:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 257:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 258:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 259:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 260:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 261:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 262:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 263:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 264:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 265:
+2019-03-10 18:15:43,450  INFO UserXml.java parseTemplate - Setting Roles index 266:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 267:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 268:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 269:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 270:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 271:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 272:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 273:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 274:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 275:SupplyManagementAdministrator_ST
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 276:SupplyManagementViewer_ST
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 277:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 278:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 279:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 280:
+2019-03-10 18:15:43,451  INFO UserXml.java parseTemplate - Setting Roles index 281:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 282:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 283:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 284:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 285:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 286:
+2019-03-10 18:15:43,452  INFO UserXml.java parseTemplate - Setting Roles index 287:
+2019-03-10 18:15:43,456  INFO UserXml.java parseTemplate - Setting Roles index 288:
+2019-03-10 18:15:43,456  INFO UserXml.java parseTemplate - Setting Roles index 289:
+2019-03-10 18:15:43,456  INFO UserXml.java parseTemplate - Setting Roles index 290:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 291:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 292:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 293:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 294:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 295:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 296:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 297:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 298:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 299:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 300:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 301:
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 302:Process Level Restriction
+2019-03-10 18:15:43,457  INFO UserXml.java parseTemplate - Setting Roles index 303:Contract Classification Restriction
+2019-03-10 18:15:43,464  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,464  INFO UserXml.java parseTemplate - setting Name Gina Geren
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate - setting FirstName Gina
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate - setting LastName Geren
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate - setting Email ggeren@tnonc.com 
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,465  INFO UserXml.java parseTemplate - setting Name Ronald Davis
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting FirstName Ronald 
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting LastName Davis
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting Email rdavis@WESTCLINIC.com 
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting Name Donato Antonecchia
+2019-03-10 18:15:43,466  INFO UserXml.java parseTemplate - setting FirstName Donato
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate - setting LastName Antonecchia
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate - setting Email dantonecchia@nycancer.com 
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(Approver_ST)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractManager_ST)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractTermsManager_ST)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(DECISIONSERVICE-Approver)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(InventoryManager_ST)
+2019-03-10 18:15:43,467  INFO UserXml.java parseTemplate -   setAssignedRoles(POBuyer)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(POPurchasingManager)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(PurchasingManager_ST)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(RQRequester)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(Requester_ST)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate -   setAssignedRoles(RequisitionApprover_ST)
+2019-03-10 18:15:43,469  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate - setting Name Karen Ellis
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate - setting FirstName Karen
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate - setting LastName Ellis
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate - setting Email kellis@WESTCLINIC.com 
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate -   setAssignedRoles(Approver_ST)
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractManager_ST)
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractTermsManager_ST)
+2019-03-10 18:15:43,470  INFO UserXml.java parseTemplate -   setAssignedRoles(DECISIONSERVICE-Approver)
+2019-03-10 18:15:43,474  INFO UserXml.java parseTemplate -   setAssignedRoles(InventoryManager_ST)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(POBuyer)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(POPurchasingManager)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(PurchasingManager_ST)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(RQRequester)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(Requester_ST)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate -   setAssignedRoles(RequisitionApprover_ST)
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,475  INFO UserXml.java parseTemplate - setting Name Michael Boonin
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting FirstName Michael
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting LastName Boonin
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting Email mboonin@nycancer.com 
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting Name Dave Stewart
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting FirstName Dave
+2019-03-10 18:15:43,476  INFO UserXml.java parseTemplate - setting LastName Stewart
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting Email dstewart@tnonc.com 
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting Name Luke Frailley
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting FirstName Luke
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting LastName Frailley
+2019-03-10 18:15:43,477  INFO UserXml.java parseTemplate - setting Email lfrailley@tnonc.com 
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate - setting Name Robert Holloway
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate - setting FirstName Robert
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate - setting LastName Holloway
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate - setting Email rholloway@tnonc.com 
+2019-03-10 18:15:43,478  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate - setting Name Saunak Shah
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate - setting FirstName Saunak
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate - setting LastName Shah
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate - setting Email saunak.shah@oneoncology.com 
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate -   setAssignedRoles(Approver_ST)
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,479  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractManager_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractTermsManager_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(DECISIONSERVICE-Approver)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(InventoryManager_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(POBuyer)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(POPurchasingManager)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(PurchasingManager_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(RQRequester)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(Requester_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(RequisitionApprover_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(SupplyManagementAdministrator_ST)
+2019-03-10 18:15:43,480  INFO UserXml.java parseTemplate -   setAssignedRoles(SupplyManagementViewer_ST)
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate - setting Name Melissa Williams
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate - setting FirstName Melissa
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate - setting LastName Williams
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate - setting Email mwilliams@westclinic.com 
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,481  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate - setting Name Bobby Zinser
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate - setting FirstName Bobby
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate - setting LastName Zinser
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate - setting Email bzinser@westclinic.com 
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,482  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate - setting Name Ryan Cullen
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate - setting FirstName Ryan
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate - setting LastName Cullen
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate - setting Email Rcullen@nycancer.com 
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,483  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting Name James Grayson
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting FirstName James
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting LastName Grayson
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting Email jgrayson@oneoncology.com 
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,484  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate - setting Name Susan Frailley
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate - setting FirstName Susan
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate - setting LastName Frailley
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate - setting Email sfrailley@tnonc.com 
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(Approver_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(Buyer_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractManager_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(ContractTermsManager_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(DECISIONSERVICE-Approver)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(InventoryManager_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(POBuyer)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(POPurchasingManager)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(PurchasingManager_ST)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(RQRequester)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,485  INFO UserXml.java parseTemplate -   setAssignedRoles(Requester_ST)
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate -   setAssignedRoles(RequisitionApprover_ST)
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate - setting Name Blake Gregg
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate - setting FirstName Blake
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate - setting LastName Gregg
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate - setting Email wgregg@tnonc.com 
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,486  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate - setting Name Ashonta Tharps
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate - setting FirstName Ashonta
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate - setting LastName Tharps
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate - setting Email atharps@westclinic.com 
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,487  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate - setting Name Ryan Calcanes
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate - setting FirstName Ryan
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate - setting LastName Calcanes
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate - setting Email rcalcanes@nycancer.com 
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,488  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate - setting Name Geraldo Barreto
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate - setting FirstName Geraldo
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate - setting LastName Barreto
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate - setting Email gbarreto@nycancer.com 
+2019-03-10 18:15:43,491  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,492  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,492  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,492  INFO UserXml.java parseTemplate - setting Name Mauricio Fernandez
+2019-03-10 18:15:43,492  INFO UserXml.java parseTemplate - setting FirstName Mauricio
+2019-03-10 18:15:43,492  INFO UserXml.java parseTemplate - setting LastName Fernandez
+2019-03-10 18:15:43,494  INFO UserXml.java parseTemplate - setting Email mfernandez@nycancer.com 
+2019-03-10 18:15:43,494  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,494  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate - setting Employee 1
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate - setting Name Kyle Breunig
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate - setting FirstName Kyle
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate - setting LastName Breunig
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate - setting Email kbreunig@nycancer.com 
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate -   setAssignedRoles(RSSRequester)
+2019-03-10 18:15:43,501  INFO UserXml.java parseTemplate -   setAssignedRoles(Receiver_ST)
+2019-03-10 18:15:43,504  INFO UserXml.java parseTemplate - End parseTemplate()

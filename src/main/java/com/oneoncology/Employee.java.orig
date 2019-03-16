@@ -1,0 +1,540 @@
+package com.oneoncology.interfaces;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.Properties;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Vector;
+import java.io.*;
+import java.text.*;
+import java.util.ArrayList;
+import java.util.Arrays.*;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.*;
+import javax.naming.*;
+import javax.naming.directory.*;
+import java.io.InputStream;
+import java.util.Properties;
+
+// json parser
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
+// log4j logger
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Appender;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.DailyRollingFileAppender;
+import org.apache.commons.codec.binary.Base64;
+
+// oltu oauth2
+import org.apache.oltu.oauth2.client.OAuthClient;
+import org.apache.oltu.oauth2.client.URLConnectionClient;
+import org.apache.oltu.oauth2.client.request.OAuthBearerClientRequest;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
+import org.apache.oltu.oauth2.client.response.OAuthJSONAccessTokenResponse;
+import org.apache.oltu.oauth2.client.response.OAuthAccessTokenResponse;
+import org.apache.oltu.oauth2.client.response.OAuthResourceResponse;
+import org.apache.oltu.oauth2.common.message.types.GrantType;
+import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
+import org.apache.oltu.oauth2.common.OAuth.HttpMethod;
+
+
+// local custom class
+import com.oneoncology.token.OAuth2;
+
+/**
+ * Infor Cloudsute Employee IONAPI interface 
+ * <br>
+ * License & Copyright
+ * <br>
+ * Copyright (c) 2019 Grant Thornton Technology Services
+ * <br>
+ * 3rd party use must be licensed by Grant Thornton
+ * <br>
+ * @author  robert nevinger robert.nevinger@us.gt.com
+ * <br>
+ * github:  https://github.com/rwnevinger
+*/
+
+public class Employee {
+
+// logger
+static Logger LOG = Logger.getLogger("com.oneoncology.interfaces.Employee.class");
+
+String ACCESS_TOKEN_URL = new String();
+String GRANT_TYPE = new String();
+String CLIENT_ID = new String();
+String CLIENT_SECRET  = new String();
+String USERNAME  = new String();
+String PASSWORD = new String();
+String nextURL = new String();
+String prevURL = new String();
+int CLASSCOUNT = 0;
+boolean setClassCount = true;
+String HOSTNAME = new String();
+String REST_GENERIC_LIST = new String();
+String TENANT_ENV = new String();
+OAuth2 OAuth2 = new OAuth2();
+
+public Hashtable<String,Hashtable> AllEmployees = new Hashtable<String,Hashtable>();
+public Hashtable<String,String> EmployeeRecord = new Hashtable<String,String>();
+public Hashtable<String,String> RESTAPIs = new Hashtable<String,String>();
+
+   /**
+   * explicit new Constructor
+   *
+   */
+   public Employee() {
+
+
+   }
+
+/**
+ * Optional  configure interface through properties file
+*/
+
+   public void initProperties() {
+
+    LOG.info("Begin initProperties()");
+
+    Properties classProperties = new Properties();
+
+    InputStream input = null;
+
+    try {
+
+        // COIFIG
+        String propertiesFile = "src/main/resources/employee.properties";
+
+        LOG.info("property file " +  propertiesFile);
+
+        // assign property file
+        input = new FileInputStream(propertiesFile);
+       
+        // load property file
+        classProperties.load(input);
+
+        LOG.info("hostname:" + classProperties.getProperty("hostname"));
+        LOG.info("rest_generic_list:" + classProperties.getProperty("rest_generic_list"));
+        LOG.info("tenant_env:" + classProperties.getProperty("tenant_env"));
+
+        this.HOSTNAME = classProperties.getProperty("hostname");
+        this.REST_GENERIC_LIST = classProperties.getProperty("rest_generic_list");
+        this.TENANT_ENV = classProperties.getProperty("tenant_env");
+
+    }
+    catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    LOG.info("End initProperties()");
+
+  }
+
+  public void setRESTAPIs() {
+
+    LOG.info("Begin setRESTAPIs");
+
+    try {
+
+       // step 1 assemble api call
+       //String ionAPI = "https://mingle-ionapi.inforcloudsuite.com/oneoncology_TST/LAWSONGHR/hcm/soap/classes/Employee/lists/_generic?_fields=Employee&_limit=1&_OUT=JSON";
+       // append name value pairs
+       String ionAPI = this.HOSTNAME + this.TENANT_ENV + "/" + this.REST_GENERIC_LIST + "_fields=Employee&_limit=1&_OUT=JSON";
+
+       LOG.info("request token");
+
+       // step 2 get a token
+       // instantiate OAuth2
+       OAuth2.requestToken();
+
+       // step 3 execute API
+       LOG.info("execAPI " + ionAPI);
+       OAuthResourceResponse resourceResponse = execAPI(ionAPI);
+
+       //converting JSON to object
+       ObjectMapper mapper = new ObjectMapper();
+
+       // ION generic_list retuns top level array e.g. [ {},{} ]
+       // IF _pagNav=false or is disabled
+       JsonNode rootNode = mapper.readTree(resourceResponse.getBody());
+
+       // assume all generic_lists return two primary nodes
+       JsonNode countNode = mapper.readTree("[]");
+       JsonNode fieldNode = mapper.readTree("[]");
+
+       int i = 0;
+
+       // if _pageNav=false or is disabled  should always have an array returned
+       if(rootNode.isArray()) {
+        for (JsonNode node : rootNode) {
+         switch (i) {
+           case 0:
+             countNode = node;
+             i++;
+           break;
+           case 1:
+             fieldNode = node;
+             i++;
+           break;
+           default:
+           i++;
+         }
+        }
+       }
+       else {
+        // TODO throw exception and end workflow
+       }
+
+
+       // read class count from countNode._count node
+       if(this.setClassCount) {
+         this.CLASSCOUNT = Integer.parseInt(countNode.path("_count").toString());
+         System.out.println("Setting CLASSCOUNT " + countNode.path("_count").asText());
+         LOG.info("Setting CLASSCOUNT " + countNode.path("_count").asText());
+         this.setClassCount = false;
+         LOG.info("Disabling Class count ");
+       }
+
+      // now that we have a CLASSCOUNT we need to read all employee numbers
+      // let's make a second call appending _fields=Employee&_limit=65&_pageNav=false&_out=JSON
+      ionAPI = this.HOSTNAME + this.TENANT_ENV + "/" + this.REST_GENERIC_LIST;
+      // append name value pairs
+      ionAPI += "_fields=Employee&_limit=" + this.CLASSCOUNT + "&_pageNav=false&_OUT=JSON";
+
+      LOG.info("execAPI " + ionAPI);
+      resourceResponse = execAPI(ionAPI);
+
+      //  _pageNav=false returns a single _fields node
+      rootNode = mapper.readTree(resourceResponse.getBody());
+
+      LOG.info("is rootNode an array ? "  + rootNode.isArray());
+
+      if(rootNode.isArray()) {
+        for (JsonNode node : rootNode) {
+         
+          // read fields node
+          JsonNode _fields = node.path("_fields");
+          // read field names
+          Iterator<String> names = _fields.fieldNames();
+          while (names.hasNext()) {
+             String name = names.next();
+	     String value = _fields.path(name).asText();
+             //System.out.println(name + "::" + value);
+             ionAPI = this.HOSTNAME + this.TENANT_ENV + "/" + this.REST_GENERIC_LIST;
+             // _fields=Employee&_limit=1&_filter=Employee%3A%3A1000&_pageNav=false&_out=JSON
+             // append name value pairs
+             ionAPI += "&_limit=" + this.CLASSCOUNT + "&pageNav=false&_OUT=JSON";
+             ionAPI += "&_fields=_all&_limit=1&_filter=Employee%3A%3A" + value + "&_pageNav=false&_OUT=JSON";
+             // provision RESTAPIs hashTable
+             LOG.info("RESTAPIs key " + value + "::" + ionAPI);
+             RESTAPIs.put(value,ionAPI);
+          }
+
+        }
+      }
+      else {
+        System.out.println("Warning setRESTAPIS() rootNode is not an array");
+        LOG.info("Warning setRESTAPIS() rootNode is not an array");
+      }
+
+   }
+   catch (Exception e) {
+        e.getMessage();
+        e.printStackTrace();
+   }
+
+    LOG.info("End setRESTAPIs");
+
+  }
+
+  public void parseResponse (OAuthResourceResponse resourceResponse) {
+
+    LOG.info("Begin parseResponse");
+
+    try {
+
+       //converting JSON to object
+       ObjectMapper mapper = new ObjectMapper();
+
+       // ION generic_list retuns top level array e.g. [ {},{} ]
+       // BusinessClass top represents an array
+       JsonNode rootNode = mapper.readTree(resourceResponse.getBody());
+
+       // assume all generic_lists return two primary nodes
+       JsonNode countNode = mapper.readTree("[]");
+       JsonNode fieldNode = mapper.readTree("[]");
+
+       int i = 0;
+
+       // should always have an array returned
+       if(rootNode.isArray()) {
+        for (JsonNode node : rootNode) {
+         switch (i) {
+           case 0:
+             countNode = node;
+             i++;
+           break;
+           case 1:
+             fieldNode = node;
+             i++;
+           break;
+           default:
+           i++;
+         }
+        }
+       }
+       else {
+        // TODO throw exception and end workflow
+       }
+
+
+       // read _links
+       JsonNode linksNode = countNode.path("_links");
+       String rel = new String();
+       for (JsonNode node : linksNode) {
+        rel = node.path("rel").asText();
+        if(rel.equals("next")) {
+	  this.nextURL = node.path("href").asText();
+        }
+        else if(rel.equals("prev")) {
+	  this.prevURL = node.path("href").asText();
+        }
+       }
+
+       System.out.println(this.nextURL); 
+       System.out.println(this.prevURL); 
+       LOG.info(nextURL);
+       LOG.info(prevURL);
+
+       // read class count from countNode._count node
+       if(this.setClassCount) {
+         this.CLASSCOUNT = Integer.parseInt(countNode.path("_count").toString());
+         System.out.println("Setting CLASSCOUNT " + countNode.path("_count").asText());
+         LOG.info("Setting CLASSCOUNT " + countNode.path("_count").asText());
+         this.setClassCount = false;
+         LOG.info("Disabling Class count ");
+         return;
+       }
+
+       // read fields node
+       JsonNode fields = fieldNode.path("_fields");
+
+       // read field names
+       Iterator<String> names = fields.fieldNames();
+
+       String EmployeeKey = new String();
+       while (names.hasNext()) {
+           String name = names.next();
+	   String value = fields.path(name).asText();
+           // omit EmployeePurgeReport
+           if (name.equals("EmployeePurgeReport")) { continue; }
+           if (name.equals("Employee")) { 
+             EmployeeKey = value; 
+           }
+           LOG.info(name + "::" + value);
+           //if (name.equals("Name")) { LOG.info(name + "::" + value); }
+           //if (name.equals("Name")) { LOG.info(name + "::" + value); }
+           // CONFIG  change
+           if(EmployeeRecord.containsKey(name)) {
+             System.out.println("WARNING:: duplicate Employee map key " + name);
+             LOG.info("WARNING:: duplicate key " + name);
+           }
+           else {
+             EmployeeRecord.put(name,value);
+           }
+       }
+
+       if(AllEmployees.containsKey(EmployeeKey)) {
+             System.out.println("WARNING:: duplicate AllEmployees map key " + EmployeeKey);
+             LOG.info("WARNING:: duplicate key " + EmployeeKey);
+       }
+       else {
+             LOG.info("Add " + EmployeeKey + " to AllEmployee Hashtable");
+             AllEmployees.put(EmployeeKey,EmployeeRecord);
+       }
+ 
+       // clear Employee
+       LOG.info("Clear Employee Hashtable");
+       EmployeeRecord.clear();
+   }
+   catch (Exception e) {
+        e.getMessage();
+        e.printStackTrace();
+   }
+
+    LOG.info("End parseResponse");
+
+  }
+
+  public OAuthResourceResponse execAPI(String ionAPI) {
+
+       LOG.info("Begin execAPI");
+
+       OAuthResourceResponse resourceResponse = null;
+
+     try {
+
+       System.out.println("  issued oauth2 token " + OAuth2.getAccessToken());
+
+       OAuthClientRequest bearerClientRequest = new OAuthBearerClientRequest(ionAPI).buildQueryMessage();
+       // token streamed in header
+       bearerClientRequest.setHeader("Authorization", "Bearer " + OAuth2.getAccessToken());
+
+       //System.out.println("OAuth2Client bearerClientRequest initialized using Oauth2 token " + OAuth2.getAccessToken());
+       LOG.info("OAuth2ClientRequest bearerClientRequest initialized using Oauth2 token " + OAuth2.getAccessToken());
+
+       OAuthClient oAuthClient = new OAuthClient(new URLConnectionClient());
+
+       //OAuthResourceResponse resourceResponse = (OAuthResourceResponse)oAuthClient.resource(bearerClientRequest, "GET", OAuthResourceResponse.class);
+       resourceResponse = (OAuthResourceResponse)oAuthClient.resource(bearerClientRequest, "GET", OAuthResourceResponse.class);
+
+       System.out.println("  API Request:  " + ionAPI);
+       System.out.println("  API Response:  " + resourceResponse.getResponseCode());
+
+       LOG.info("  API Request:  " + ionAPI);
+       LOG.info("  API Response:  " + resourceResponse.getResponseCode());
+
+       if(resourceResponse.getResponseCode() != 200) {
+         System.out.println(" Error API Response:  " + resourceResponse.getResponseCode());
+         System.out.println(" Body:  " + resourceResponse.getBody());
+         LOG.info(" Error API Response:  " + resourceResponse.getResponseCode());
+         LOG.info(" Body:  " + resourceResponse.getBody());
+       }
+
+       // stream JSON to log
+       //LOG.info(resourceResponse.getBody());
+
+      }
+      catch (Exception e) {
+        e.getMessage();
+        e.printStackTrace();
+      }
+
+       LOG.info("End execAPI");
+
+       return resourceResponse;
+   } 
+
+
+    /**
+     * genericList API call
+     *
+     * @param 
+     */
+   public void genericList() {
+
+     LOG.info("Begin genericList()");
+
+     try {
+
+       Vector <String> sortedKeys = new Vector<String>();
+
+       // read collection keys
+       Enumeration keys = RESTAPIs.keys();
+
+       while(keys.hasMoreElements()) {
+          sortedKeys.add( (String) keys.nextElement());
+       }
+
+       // iterate keys and build 
+       for (int i=0; i<sortedKeys.size(); i++) {
+
+          String Employee = sortedKeys.get(i);
+          String ionAPI = RESTAPIs.get(Employee);
+
+          LOG.info("Employee:" + Employee + "::" + ionAPI);
+          OAuthResourceResponse resourceResponse = execAPI(ionAPI);
+
+          //converting JSON to object
+          ObjectMapper mapper = new ObjectMapper();
+
+          //  _pageNav=false returns a single _fields node
+          JsonNode rootNode = mapper.readTree(resourceResponse.getBody());
+
+          LOG.info("is rootNode an array ? "  + rootNode.isArray());
+
+          if(rootNode.isArray()) {
+
+            for (JsonNode node : rootNode) {
+
+        
+              // hashmap key 
+              String EmployeeKey = new String();
+              // read fields node
+              JsonNode _fields = node.path("_fields");
+
+              //LOG.info(_fields);
+
+              // read field names
+              Iterator<String> names = _fields.fieldNames();
+              while (names.hasNext()) {
+                 String name = names.next();
+	         String value = _fields.path(name).asText();
+                 // omit EmployeePurgeReport
+                 if (name.equals("EmployeePurgeReport")) { continue; }
+                 if (name.equals("Employee")) { 
+                   EmployeeKey = value; 
+                 }
+                 LOG.info(name + "::" + value);
+                 if(EmployeeRecord.containsKey(name)) {
+                   System.out.println("WARNING:: duplicate Employee map key " + name);
+                   LOG.info("WARNING:: duplicate key " + name);
+                 }
+                 else {
+                   EmployeeRecord.put(name,value);
+                 }
+             }
+
+             if(AllEmployees.containsKey(EmployeeKey)) {
+               System.out.println("WARNING:: duplicate AllEmployees map key " + EmployeeKey);
+               LOG.info("WARNING:: duplicate key " + EmployeeKey);
+             }
+             else {
+               LOG.info("Add " + EmployeeKey + " to AllEmployee Hashtable");
+               AllEmployees.put(EmployeeKey,EmployeeRecord);
+             }
+ 
+             // clear Employee
+             LOG.info("Clear Employee Hashtable");
+             EmployeeRecord.clear();
+
+           } // next node
+        }
+        else {
+          System.out.println("Warning genericList() rootNode is not an array");
+          LOG.info("Warning generickList() rootNode is not an array");
+        }
+
+      } // read and executie next API
+
+     }
+     catch (Exception e) {
+      e.getMessage();
+      e.printStackTrace();
+     }
+
+
+     LOG.info("End genericList()");
+
+    }
+}

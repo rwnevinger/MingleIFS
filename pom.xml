@@ -1,0 +1,221 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oneoncology</groupId>
+  <artifactId>ion</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>mingleion</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	<jdk.version>1.7</jdk.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.12</version>
+      <scope>provided</scope>
+      <type>jar</type>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.6</version>
+        <scope>provided</scope>
+        <type>jar</type>
+    </dependency>
+
+   <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+   <dependency>
+     <groupId>org.apache.httpcomponents</groupId>
+     <artifactId>httpcore</artifactId>
+     <version>4.4.10</version>
+     <scope>provided</scope>
+     <type>jar</type>
+   </dependency>
+
+
+   <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient-cache -->
+   <dependency>
+     <groupId>org.apache.httpcomponents</groupId>
+     <artifactId>httpclient-cache</artifactId>
+     <version>4.5.6</version>
+     <scope>provided</scope>
+     <type>jar</type>
+   </dependency>
+
+   <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime -->
+   <dependency>
+     <groupId>org.apache.httpcomponents</groupId>
+     <artifactId>httpmime</artifactId>
+     <version>4.5.6</version>
+     <scope>provided</scope>
+     <type>jar</type>
+   </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.oltu.oauth2/org.apache.oltu.oauth2.client -->
+  <dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.client</artifactId>
+    <version>1.0.2</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.oltu.oauth2/org.apache.oltu.oauth2.common -->
+  <dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.common</artifactId>
+    <version>1.0.2</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+  <dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+    <scope>provided</scope>
+    <type>jar</type>
+  </dependency>
+
+  <!-- JSON object mapper -->
+  <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.4</version>
+    <scope>compile</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.7.25</version>
+    <scope>compile</scope>
+  </dependency>
+
+
+   <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+   <!--dependency>
+       <groupId>org.apache.logging.log4j</groupId>
+       <artifactId>log4j-core</artifactId>
+       <version>2.11.1</version>
+       <type>jar</type>
+   </dependency-->
+
+  <!-- https://mvnrepository.com/artifact/org.apache.logging/logging-parent -->
+  <!--dependency>
+    <groupId>org.apache.logging</groupId>
+    <artifactId>logging-parent</artifactId>
+    <version>2</version>
+    <type>pom</type>
+  </dependency-->
+
+  <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+  </dependency>
+
+
+  </dependencies>
+
+
+  <build>
+
+
+        <!-- command mvn compile  -->
+        <!-- individual class files will be found in outputDirectory when compiled with mvn compile -->
+        <!-- all class files will be as jars -->
+        <!-- change default "target" to "bin for build  -->
+        <directory>${project.basedir}/bin</directory>
+        <sourceDirectory>${basedir}/src/main/java/com/oneoncology</sourceDirectory>
+
+        <!-- scriptSourceDirectory>${basedir}/src/main/scripts</scriptSourceDirectory -->
+        <!-- testSourceDirectory>${basedir}/src/test/java</testSourceDirectory -->
+        <!-- testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory -->
+
+        <!-- declare JAR filename -->
+        <finalName>mingleion</finalName>
+
+        <plugins>
+
+          <!-- JDK compiler 1.7 min to support string based switch -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+         </plugin>
+
+         <!-- copy project dependencies bin/lib -->
+         <!-- this should pull jars specified in above dependency inventory to bin/lib -->
+	 <plugin>
+    	 <groupId>org.apache.maven.plugins</groupId>
+    	 <artifactId>maven-dependency-plugin</artifactId>
+
+  	 <executions>
+	        <execution>
+       	     		<id>copy-dependencies</id>
+	                <!--phase>prepare-package</phase-->
+	                <phase>package</phase>
+       	     		<goals>
+       	                  <goal>copy-dependencies</goal>
+       	     		</goals>
+       	     		<configuration>
+       	         	  <outputDirectory>${project.build.directory}/lib</outputDirectory>
+		       	  <overWriteReleases>false</overWriteReleases>
+       			  <overWriteSnapshots>false</overWriteSnapshots>
+		       	  <overWriteIfNewer>true</overWriteIfNewer>
+       	     		</configuration>
+       	  	</execution>
+  	</executions>
+	</plugin>
+
+	<plugin>
+
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+	<version>3.1.1</version>
+
+        <!-- jar plubin directives -->
+        <!-- declare workflow entry point which is Interface -->
+        <!-- invoking jar with command line interface  -->
+        <!-- java -jar bin/ioninterface.jar Employee -->
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.oneoncology.UserXml</mainClass>
+            </manifest>
+          </archive>
+          <!-- add dependencies to jar -->
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+
+      </plugin>
+
+
+      </plugins>
+
+  </build>
+
+
+</project>

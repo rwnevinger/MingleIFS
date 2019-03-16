@@ -1,0 +1,45 @@
+2019-03-08 20:47:24,415  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-08 20:47:24,418  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-08 20:47:24,419  INFO OAuth2.java InitProperties - password_credentials
+2019-03-08 20:47:24,419  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-08 20:47:24,421  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-08 20:47:24,421  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-08 20:47:24,421  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-08 20:47:24,421  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-08 20:47:24,421  INFO OAuth2.java InitProperties - End InitProperties()
+2019-03-08 20:48:14,395  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-08 20:48:14,397  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-08 20:48:14,398  INFO OAuth2.java InitProperties - password_credentials
+2019-03-08 20:48:14,398  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-08 20:48:14,400  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-08 20:48:14,400  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-08 20:48:14,400  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-08 20:48:14,400  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-08 20:48:14,400  INFO OAuth2.java InitProperties - End InitProperties()
+2019-03-08 21:57:29,431  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-08 21:57:29,433  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-08 21:57:29,433  INFO OAuth2.java InitProperties - password_credentials
+2019-03-08 21:57:29,433  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-08 21:57:29,435  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-08 21:57:29,435  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-08 21:57:29,435  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-08 21:57:29,436  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-08 21:57:29,436  INFO OAuth2.java InitProperties - End InitProperties()
+2019-03-08 22:21:26,471  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-08 22:21:26,476  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-08 22:21:26,477  INFO OAuth2.java InitProperties - password_credentials
+2019-03-08 22:21:26,477  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-08 22:21:26,479  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-08 22:21:26,479  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-08 22:21:26,479  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-08 22:21:26,479  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-08 22:21:26,479  INFO OAuth2.java InitProperties - End InitProperties()
+2019-03-08 22:24:40,987  INFO OAuth2.java InitProperties - Begin InitProperties()
+2019-03-08 22:24:40,992  INFO OAuth2.java InitProperties - property file oauth2.properties
+2019-03-08 22:24:40,993  INFO OAuth2.java InitProperties - password_credentials
+2019-03-08 22:24:40,993  INFO OAuth2.java InitProperties - https://mingle-sso.inforcloudsuite.com:443/ONEONCOLOGY_TST/as/token.oauth2
+2019-03-08 22:24:40,995  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST~ynkZwSoWycgApD0JD12Y4uZ0cdEc0YbJ8-keBxwIru0
+2019-03-08 22:24:40,995  INFO OAuth2.java InitProperties - ZTgBqPitkoqNRGk7_9N9TEvMK58l0pcREYaqTA18FgO1VaCOEdiLRZGsVg3O5oWNkaWUEyBtgw4XUHN5uSDuqQ
+2019-03-08 22:24:40,995  INFO OAuth2.java InitProperties - ONEONCOLOGY_TST#In2njDELOtOpNP0a-abvgoOt8uxhO09zQry3NwnfBJfh3OdjK4RmysivQ4PtcgQ0KKDDl9UjH7oBeY6IRqah0Q
+2019-03-08 22:24:40,995  INFO OAuth2.java InitProperties - YhVIbUCZP9PFqytoxB38K1bB0P11kQ6R4lZb3C7SfgEl_pPjHZ2yJVd6uoCoz42RpjCmv9qJDgDYK0g0bxeEug
+2019-03-08 22:24:40,995  INFO OAuth2.java InitProperties - End InitProperties()
