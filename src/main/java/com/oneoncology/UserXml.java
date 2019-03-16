@@ -980,8 +980,8 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
 
       // instantiate objects
       UserXml UserXml = new UserXml();
-      UserXml.initProperties();
       UserXml.SECURITY_TEMPLATE = args[0];
+      UserXml.initProperties();
       UserXml.setMingleUserName();
       UserXml.setLandmarkActors();
       UserXml.parseTemplate();
