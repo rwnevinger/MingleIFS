@@ -6,3 +6,4 @@ src/main/logs
 /bin/maven-status
 /bin/surefire-reports
 /bin/test-classes
+/bin/classes/*.properties

@@ -129,6 +129,15 @@
   </dependency>
 
 
+  <!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
+  <!-- enable property file run time changes -->
+  <dependency>
+    <groupId>commons-configuration</groupId>
+    <artifactId>commons-configuration</artifactId>
+    <version>1.6</version>
+  </dependency>
+
+
   </dependencies>
 
 
@@ -137,7 +146,7 @@
 
         <!-- command mvn compile  -->
         <!-- individual class files will be found in outputDirectory when compiled with mvn compile -->
-        <!-- all class files will be as jars -->
+        <!-- all class files will be included in finalName jar -->
         <!-- change default "target" to "bin for build  -->
         <directory>${project.basedir}/bin</directory>
         <sourceDirectory>${basedir}/src/main/java/com/oneoncology</sourceDirectory>
@@ -192,10 +201,11 @@
         <artifactId>maven-jar-plugin</artifactId>
 	<version>3.1.1</version>
 
-        <!-- jar plubin directives -->
+        <!-- jar plugin directives -->
         <!-- declare workflow entry point which is Interface -->
         <!-- invoking jar with command line interface  -->
         <!-- java -jar bin/ioninterface.jar Employee -->
+        <!-- CONFIG classpath prefix must match -->
         <configuration>
           <archive>
             <manifest>

@@ -57,13 +57,20 @@ import org.apache.oltu.oauth2.common.OAuth;
 import org.apache.oltu.oauth2.common.OAuth.HttpMethod;
 import org.apache.oltu.oauth2.common.OAuth.ContentType;
 
+// runtime changes to property files
+import org.apache.commons.configuration.Configuration;
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
+import org.apache.commons.configuration.FileConfiguration;
+import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
+
 // local custom class
 import com.oneoncology.OAuth2;
 import com.oneoncology.MingleUser;
 import com.oneoncology.InvalidJSONArray;
 
 /**
- * Infor Cloudsute Mingle UserXml generator
+ * Infor CloudSuite Mingle UserXml generator
  * <br>
  * License & Copyright
  * <br>
@@ -79,7 +86,8 @@ import com.oneoncology.InvalidJSONArray;
 public class UserXml {
 
 // logger
-static Logger LOG = Logger.getLogger("UserXml.class");
+//static Logger LOG = Logger.getLogger("UserXml.class");
+static Logger LOG;
 
 String ACCESS_TOKEN_URL = new String();
 String GRANT_TYPE = new String();
@@ -118,7 +126,7 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
 
 
    /**
-   * explicit new Constructor
+   * declare explicit new Constructor
    *
    */
    public UserXml() {
@@ -132,29 +140,50 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
 
    public void initProperties() {
 
-    LOG.info("Begin initProperties()");
-
     Properties classProperties = new Properties();
 
     InputStream input = null;
 
     try {
 
-        // CONFIG
-        //String propertiesFile = "src/main/resources/userxml.properties";
-        String propertiesFile = "userxml.properties";
+        // inialize log
+        String propertiesFile = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
 
-        LOG.info("property file " +  propertiesFile);
+        // log4j uses PropertyConfigurator to read properties file
+        // NOTE:  configure before initliazing log
+        PropertyConfigurator.configure(propertiesFile);
 
-        // assign property file
-        //input = new FileInputStream(propertiesFile);
+        System.out.println("Load properties file " + propertiesFile);
 
-        input = getClass().getClassLoader().getResourceAsStream(propertiesFile);
+        // init LOG
+        LOG = Logger.getLogger("UserXml.class");
+
+        LOG.info("Begin initProperties()");
+        LOG.info("log4j configuration completed using " + propertiesFile);
+
+        // LOG should be working....read class properties now
  
-       
+        propertiesFile = System.getProperty("user.dir") + "/src/main/resources/userxml.properties";
+
+        // read properties file from classpath and add FileChangedReloadingStrategy instance to it. 
+        // this strategy enforces that propertyConfiguration will be reloaded if it has changed
+
+        //PropertiesConfiguration classProperties = new PropertiesConfiguration(propertiesFile);
+        LOG.info("Load properties file " + propertiesFile);
+        System.out.println("Load properties file " + propertiesFile);
+
+        //PropertiesConfiguration classProperties = new PropertiesConfiguration(getClass().getClassLoader().getResource(propertiesFile));
+        //PropertiesConfiguration classProperties = new PropertiesConfiguration(propertiesFile));
+
+        // enable runtime reloading
+        //FileChangedReloadingStrategy reloadingStrategy = new FileChangedReloadingStrategy();
+        //reloadingStrategy.setRefreshDelay(10);
+        //classProperties.setReloadingStrategy(reloadingStrategy);
+
+        input = new FileInputStream(propertiesFile);
+ 
         // load property file
         classProperties.load(input);
-
 
         this.HOSTNAME = classProperties.getProperty("hostname");
         this.HCM_CLASSES = classProperties.getProperty("hcm_classes");
@@ -162,20 +191,70 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
         this.TENANT_ENV = classProperties.getProperty("tenant_env");
         this.FOLDER = classProperties.getProperty("folder");
 
+        //this.HOSTNAME = (String) classProperties.getProperty("hostname");
+        //this.HCM_CLASSES = (String) classProperties.getProperty("hcm_classes");
+        //this.FSM_CLASSES = (String) classProperties.getProperty("fsm_classes");
+        //this.TENANT_ENV = (String) classProperties.getProperty("tenant_env");
+        //this.FOLDER = (String) classProperties.getProperty("folder");
+
         LOG.info("hostname:" + this.HOSTNAME);
         LOG.info("hcm_classes:" + this.HCM_CLASSES);
         LOG.info("fsm_classes:" + this.FSM_CLASSES);
         LOG.info("tenant_env:" + this.TENANT_ENV);
         LOG.info("folder:" + this.FOLDER);
 
+
+        LOG.info("End initProperties()");
+
     }
     catch (Exception e) {
       e.printStackTrace();
+      System.exit(0);
     }
 
-    LOG.info("End initProperties()");
-
   }
+
+   /**
+    * log environment
+    *
+    * @params 
+   */
+   public void environment() {
+
+      LOG.info("Begin");
+
+      // initialize map with all environment keys and values
+      Map<String, String> ENV = System.getenv();
+
+      // define list
+      List<String> envKeys = new ArrayList<String>();
+
+      // initialize list
+      for (String envKey : ENV.keySet()) {
+        envKeys.add(envKey);
+      }
+
+      // sort list
+      Collections.sort(envKeys);
+
+      for (String envKey : envKeys) {
+        LOG.info(envKey + "->" + ENV.get(envKey));
+        //if(envKey.equals("HOST")) {
+        //  this.HOST = ENV.get(envKey);
+        //} 
+      }
+
+      // userDir is PWD
+      String userDir = System.getProperty("user.dir");
+      LOG.info("userDir->" + userDir);
+      //for (String envKey : ENV.keySet()) {
+        //System.out.format("%s=%s%n", envKey, env.get(envName));
+        //LOG.info(envKey + "->" + ENV.get(envKey));
+      //}
+
+      LOG.info("End");
+
+   }
 
 
   /**
@@ -290,6 +369,9 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
 
     }
     catch (Exception e) {
+        e.getMessage();
+        e.printStackTrace();
+        System.exit(0); 
     }
 
     /*
@@ -397,6 +479,7 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
     catch (Exception e) {
         e.getMessage();
         e.printStackTrace();
+        System.exit(0); 
     }
   
     if(createActor) { 
@@ -534,15 +617,15 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
           else if(MingleIDActor.containsKey(MingleId)) {
             // read assignment
             String assignedActor = MingleIDActor.get(MingleId);
-            System.out.println("***WARNING Actor " + assignedActor  + " is assigned to MingleID " + MingleId);
-            System.out.println("  " +  Actor + " should be assigned to a unique email address validate in Rich Client Actor Management");
+            System.out.println("Active Actor " + assignedActor  + " is assigned to MingleID " + MingleId);
+            System.out.println("***WARNING Actor  " +  Actor + " should be assigned to a unique email address validate in Rich Client Actor Management");
             LOG.info("***WARNING Actor " + assignedActor + " is assigned to MingleID " + MingleId);
             LOG.info("  " +  Actor + " should be assigned to a unique email address");
           }
           else {
-            LOG.info ("Add key Actor::" + Actor + " value MingleId::" + MingleId + " to LandmarkActors hashtable");
+            LOG.info ("Add key Actor::" + Actor + " value MingleId::" + MingleId.toLowerCase() + " to LandmarkActors hashtable");
             // key actor to mingleid
-            LandmarkActors.put(Actor,MingleId);
+            LandmarkActors.put(Actor,MingleId.toLowerCase());
             // we only want legit email address 
             // match ampersam
             // String regex = "\\@";
@@ -562,6 +645,7 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
    catch (Exception e) {
         e.getMessage();
         e.printStackTrace();
+        System.exit(0); 
    }
 
     LOG.info("End setLandmarkActors");
@@ -635,6 +719,7 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
    catch (Exception e) {
         e.getMessage();
         e.printStackTrace();
+        System.exit(0); 
    }
 
     LOG.info("End setMingleUserName");
@@ -703,11 +788,12 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
       catch (Exception e) {
         e.getMessage();
         e.printStackTrace();
+        System.exit(0); 
       }
 
-       LOG.info("End execAPI");
+      LOG.info("End execAPI");
 
-       return resourceResponse;
+      return resourceResponse;
    }
 
     /**
@@ -850,8 +936,6 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
         FileWriter fwXml = new FileWriter(xmlFile);
         BufferedWriter xml = new BufferedWriter(fwXml);
 
-        System.out.println("xml FileWriter " + fileName);
-        LOG.info("xml FileWriter " + fileName);
 
         xml.write("<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n");
         xml.write("<Users>\n\n");
@@ -949,19 +1033,25 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
         xml.flush();
         xml.close();
 
+        LOG.info("Create xml load file " + fileName);
+        System.out.println("Created xml load file " + fileName);
+
      }
      catch (NullPointerException e) {
         System.out.println("AutoEss.loadUserXml SimpleDateFormat Date exception " + e.toString());
         LOG.error("possible SimpleDateFormat exception " + e.toString());
+        System.exit(0);
      }
      catch (IllegalArgumentException  e) {
         System.out.println("AutoEss.loadUserXml SimpleDateFormat Date exception " + e.toString());
         LOG.error("possible SimpleDateFormat exception " + e.toString());
+        System.exit(0);
 
      }
      catch (Exception e) {
       e.getMessage();
       e.printStackTrace();
+      System.exit(0);
      }
 
      LOG.info("End loadUserXml()");
@@ -982,11 +1072,13 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
       UserXml UserXml = new UserXml();
       UserXml.SECURITY_TEMPLATE = args[0];
       UserXml.initProperties();
+      UserXml.environment();
       UserXml.setMingleUserName();
       UserXml.setLandmarkActors();
       UserXml.parseTemplate();
       UserXml.loadUserXml();
 
+      System.out.println("Work flow completed, complete log files will be found according to log4j.properties log location");
 
     }
     catch (Exception e) {

@@ -66,9 +66,7 @@ import org.apache.log4j.DailyRollingFileAppender;
 
 public class OAuth2 extends Object {
 
-
-//public Logger LOG = Logger.getLogger("");
-public Logger LOG = Logger.getLogger("OAuth2.class");
+static Logger LOG;
 
 // required oauth2 token parameters
 private String SCOPE;
@@ -101,7 +99,6 @@ public OAuth2() {
 
   private void InitProperties() {
 
-    LOG.info("Begin InitProperties()");
 
     Properties oauth2Properties = new Properties();
 
@@ -109,12 +106,27 @@ public OAuth2() {
 
     try {
 
-        // CONFIG
-        String propertiesFile = "oauth2.properties";
+        // inialize log
+        String propertiesFile = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
 
-        LOG.info("property file " +  propertiesFile);
+        // log4j uses PropertyConfigurator to read properties file
+        // NOTE:  configure before initliazing log
+        PropertyConfigurator.configure(propertiesFile);
 
-        input = getClass().getClassLoader().getResourceAsStream(propertiesFile);
+        // init LOG
+        LOG = Logger.getLogger("OAuth2.class");
+
+        LOG.info("Begin InitProperties()");
+        LOG.info("log4j configuration completed using " + propertiesFile);
+
+
+        // configure oauth2
+        propertiesFile = System.getProperty("user.dir") + "/src/main/resources/oauth2.properties";
+
+        LOG.info("load property file " +  propertiesFile);
+
+        //input = getClass().getClassLoader().getResourceAsStream(propertiesFile);
+        input = new FileInputStream(propertiesFile);
 
         // load property file
         oauth2Properties.load(input);
@@ -124,7 +136,7 @@ public OAuth2() {
         LOG.info(oauth2Properties.getProperty("client_id"));
         LOG.info(oauth2Properties.getProperty("client_secret"));
         LOG.info(oauth2Properties.getProperty("username"));
-        LOG.info(oauth2Properties.getProperty("password"));
+        //LOG.info(oauth2Properties.getProperty("password"));
 
         this.GRANT_TYPE = oauth2Properties.getProperty("grant_type");
         this.ACCESS_TOKEN_URL = oauth2Properties.getProperty("access_token_url");

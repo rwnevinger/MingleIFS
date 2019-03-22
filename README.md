@@ -27,10 +27,11 @@ git add .gitignore
 git add bin
 
 mark changes: git commit -a
-update repo:  git push f https://github.com/rwnevinger/MingleIFS master
+update repo:  git push https://github.com/rwnevinger/MingleIFS master
+force update repo:  git push -f https://github.com/rwnevinger/MingleIFS master
 
 or should this be
-update repo:  git push f https://github.com/rwnevinger/MingleIFS.git master
+update repo:  git push https://github.com/rwnevinger/MingleIFS.git master
 
 
 
