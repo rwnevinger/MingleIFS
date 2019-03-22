@@ -502,6 +502,9 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
       System.out.println("*** Create Actor " + Actor + " for MingleId::" + email);
       LOG.info("  *** Create Actor " + Actor + " for MingleId::" + email);
       MingleUser.setLandmarkActor(Actor);
+      // BUG  add email keyed by actor to Landmark Actors
+      // you could have multiple joe smith's
+      LandmarkActors.put(Actor,email);
     }
     else {
       MingleUser.setLandmarkActor(Actor);
