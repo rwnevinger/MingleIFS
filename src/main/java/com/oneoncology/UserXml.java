@@ -483,22 +483,30 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
     }
   
     if(createActor) { 
-      Actor = MingleUser.getFirstName().toLowerCase() + "." + MingleUser.getLastName().toLowerCase() + "."  + "1"; 
-      // validate that we don't have a duplicate actor
-      if(LandmarkActors.containsKey(Actor)) {
-        System.out.println("*** Duplicate Actor " + LandmarkActors.get(Actor));
+
+        // the first actors 
+        int version = 1;
+        Actor = MingleUser.getFirstName().toLowerCase() + "." + MingleUser.getLastName().toLowerCase() + "."  + version;
+        // validate that we don't have a duplicate actor
+        while(LandmarkActors.containsKey(Actor)) {
+          System.out.println("*** Duplicate Actor " + Actor );
+          // we need locate the next available actor
+          version++;
+          Actor = MingleUser.getFirstName().toLowerCase() + "." + MingleUser.getLastName().toLowerCase() + "."  + version;
+        }
+
         // read current actor
-        String currentActor = LandmarkActors.get(Actor);
+        //String currentActor = LandmarkActors.get(Actor);
         // split on period
-        String[] actorArray = currentActor.split("\\.");
+        //String[] actorArray = currentActor.split("\\.");
         // read current version which is 3 field or 2 array index
-        int version = Integer.parseInt(actorArray[2]);
+        //int version = Integer.parseInt(actorArray[2]);
         // increment version
-        version++;
+        //version++;
         // create new key
-        Actor = MingleUser.getFirstName().toLowerCase() + "." + MingleUser.getLastName() + "." + version;
-        System.out.println("*** Incrementing Actor " + Actor);
-      }
+        //Actor = MingleUser.getFirstName().toLowerCase() + "." + MingleUser.getLastName() + "." + version;
+        //System.out.println("*** Incrementing Actor " + Actor);
+
       System.out.println("*** Create Actor " + Actor + " for MingleId::" + email);
       LOG.info("  *** Create Actor " + Actor + " for MingleId::" + email);
       MingleUser.setLandmarkActor(Actor);
