@@ -988,9 +988,9 @@ public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+
             xml.write("  <Department>");
             xml.write("</Department>\n");
 
-            xml.write("  <Email>");
+            xml.write("  <EmailId>");
             xml.write(email);
-            xml.write("</Email>\n");
+            xml.write("</EmailId>\n");
 
             xml.write("  <FederatedId>");
             xml.write("</FederatedId>\n");
