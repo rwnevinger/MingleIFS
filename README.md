@@ -33,5 +33,36 @@ force update repo:  git push -f https://github.com/rwnevinger/MingleIFS master
 or should this be
 update repo:  git push https://github.com/rwnevinger/MingleIFS.git master
 
+updating single file
+git commit -m "Create unique actor ids for duplicate actors"
+git config user.name "rwnevinger@gmail.com"
+git config user.email "rwnevinger@gmail.com"
+cd src/main/java/com/oneoncology
+git commit -m "Create unique actor ids for duplicate actors"
+git push https://github.com/rwnevinger/MingleIFS
+Username for 'https://github.com': rwnevinger@gmail.com
+Password for 'https://rwnevinger@gmail.com@github.com':
+Counting objects: 8, done.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 805 bytes | 805.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: GitHub found 8 vulnerabilities on rwnevinger/MingleIFS's default branch (8 high). To find out more, visit:
+remote:      https://github.com/rwnevinger/MingleIFS/network/alerts
+remote:
+To https://github.com/rwnevinger/MingleIFS
+   8a19297..c24fd85  master -> master
+
+ pull https://github.com/rwnevinger/MingleIFS
+From https://github.com/rwnevinger/MingleIFS
+ * branch            HEAD       -> FETCH_HEAD
+Updating 8a19297..c24fd85
+Fast-forward
+ src/main/java/com/oneoncology/UserXml.java | 30 +++++++++++++++++++-----------
+ 1 file changed, 19 insertions(+), 11 deletions(-)
+
+
+
 
 
